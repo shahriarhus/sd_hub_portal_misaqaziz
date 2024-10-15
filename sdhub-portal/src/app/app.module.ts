@@ -11,12 +11,14 @@ import { MatInput, MatInputModule } from '@angular/material/input';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatCalendar } from '@angular/material/datepicker';
 import { MatCardModule } from '@angular/material/card';
+import { RegisterSingleComponent } from './register-single/register-single.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SigninComponent,
-    RegisterComponent
+    RegisterComponent,
+    RegisterSingleComponent
   ],
   imports: [
     BrowserModule,
