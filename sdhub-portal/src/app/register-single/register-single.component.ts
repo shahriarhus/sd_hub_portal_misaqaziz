@@ -12,13 +12,13 @@ import {MatButtonModule} from '@angular/material/button';
   standalone: false
 })
 export class RegisterSingleComponent {
-  private _formBuilder = inject(FormBuilder);
+  // private _formBuilder = inject(FormBuilder);
 
-  firstFormGroup = this._formBuilder.group({
-    firstCtrl: ['', Validators.required],
-  });
-  secondFormGroup = this._formBuilder.group({
-    secondCtrl: ['', Validators.required],
-  });
-  isLinear = false;
+  // firstFormGroup = this._formBuilder.group({
+  //   firstCtrl: ['', Validators.required],
+  // });
+  // secondFormGroup = this._formBuilder.group({
+  //   secondCtrl: ['', Validators.required],
+  // });
+  // isLinear = false;
 }

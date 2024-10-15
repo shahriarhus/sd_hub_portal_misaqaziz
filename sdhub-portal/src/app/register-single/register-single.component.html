@@ -1,4 +1,4 @@
-<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+<!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
     {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
   </button>
   <mat-stepper [linear]="isLinear" #stepper>
@@ -36,4 +36,32 @@
       </div>
     </mat-step>
   </mat-stepper>
+   -->
+<div>
+  <h1>Registration Form</h1>
+  <!--Page 1-->
+  <mat-stepper>
+    <mat-step>
+      <ng-template matStepLabel>Content 1</ng-template>
+        <p>Content on 1</p>
+      <button mat-button matStepperNext>Next</button>
+      
+    </mat-step>
   
+  <!--Page 2-->
+ 
+    <mat-step>
+      <ng-template matStepLabel>Content 2</ng-template>
+      <p>Content on 2</p>
+      <button mat-button matStepperNext>Next</button>
+      <button mat-button matStepperPrevious>Previous</button>
+    </mat-step>
+  
+  <!--Page 3-->
+ 
+    <mat-step>
+      <ng-template matStepLabel>Content 3</ng-template>
+        <p>Content on 1</p>
+    </mat-step>
+  </mat-stepper>
+</div>

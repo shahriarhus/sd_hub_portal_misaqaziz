@@ -6,11 +6,11 @@ import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { SigninComponent } from './signin/signin.component';
 import { RegisterComponent } from './register/register.component';
-import { MatStep, MatStepper, MatStepperModule } from '@angular/material/stepper';
-import { MatInput, MatInputModule } from '@angular/material/input';
-import { MatButton, MatButtonModule } from '@angular/material/button';
-import { MatCalendar } from '@angular/material/datepicker';
-import { MatCardModule } from '@angular/material/card';
+import { MatStep, MatStepper, MatStepperModule } from '@angular/material/stepper'; //Material
+import { MatInput, MatInputModule } from '@angular/material/input'; //Material
+import { MatButton, MatButtonModule } from '@angular/material/button'; //Material
+import { MatCalendar } from '@angular/material/datepicker'; //Material
+import { MatCardModule } from '@angular/material/card'; //Material
 import { RegisterSingleComponent } from './register-single/register-single.component';
 
 @NgModule({
@@ -25,10 +25,10 @@ import { RegisterSingleComponent } from './register-single/register-single.compo
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    MatStepperModule,
-    MatInputModule,
-    MatButtonModule,
-    MatCardModule
+    MatStepperModule, //Material
+    MatInputModule, //Material
+    MatButtonModule, //Material
+    MatCardModule //Material
   ],
   providers: [
     provideAnimationsAsync()
