@@ -1,9 +1,9 @@
 import {Component, inject} from '@angular/core';
 import {FormBuilder, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatStepperModule} from '@angular/material/stepper';
-import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input'; //Material
+import {MatFormFieldModule} from '@angular/material/form-field'; //Material
+import {MatStepperModule} from '@angular/material/stepper'; //Material
+import {MatButtonModule} from '@angular/material/button'; //Material
 
 @Component({
   selector: 'app-register-single',

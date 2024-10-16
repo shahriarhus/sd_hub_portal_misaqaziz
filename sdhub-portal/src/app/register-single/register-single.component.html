@@ -37,31 +37,28 @@
     </mat-step>
   </mat-stepper>
    -->
-<div>
+<div> <!-- Parent -->
   <h1>Registration Form</h1>
-  <!--Page 1-->
-  <mat-stepper>
-    <mat-step>
-      <ng-template matStepLabel>Content 1</ng-template>
+
+  <div>
+    <mat-stepper> <!--Page 1-->
+      <mat-step>
+        <ng-template matStepLabel>Content 1</ng-template>
         <p>Content on 1</p>
-      <button mat-button matStepperNext>Next</button>
-      
-    </mat-step>
-  
-  <!--Page 2-->
- 
-    <mat-step>
-      <ng-template matStepLabel>Content 2</ng-template>
-      <p>Content on 2</p>
-      <button mat-button matStepperNext>Next</button>
-      <button mat-button matStepperPrevious>Previous</button>
-    </mat-step>
-  
-  <!--Page 3-->
- 
-    <mat-step>
-      <ng-template matStepLabel>Content 3</ng-template>
+        <button mat-button matStepperNext>Next</button>
+      </mat-step>
+
+      <mat-step> <!--Page 2-->
+        <ng-template matStepLabel>Content 2</ng-template>
+        <p>Content on 2</p>
+        <button mat-button matStepperNext>Next</button>
+        <button mat-button matStepperPrevious>Previous</button>
+      </mat-step>
+
+      <mat-step> <!--Page 3-->
+        <ng-template matStepLabel>Content 3</ng-template>
         <p>Content on 1</p>
-    </mat-step>
-  </mat-stepper>
+      </mat-step>
+    </mat-stepper>
+  </div>
 </div>
