@@ -5,4 +5,34 @@
   .mat-mdc-form-field {
     margin-top: 16px;
   }
+
+  .page1 {
+    background-color: #eb3a3a;
+  }
   
+  h2 {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .group1{
+    padding-left: 0px;
+    padding-right: 0px;
+    gap: 50px;
+    display: flex;
+    /* justify-content: space-between;
+    display: flex; */
+  }
+
+  input .group1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+/*
+  .mat-form-field .mat-input-element {
+  
+    background-color: #ab2020; 
+    color: #12458d; 
+    padding: 10px; 
+  }
+  */

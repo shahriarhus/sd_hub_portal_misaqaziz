@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
     {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
   </button>
@@ -37,28 +39,71 @@
     </mat-step>
   </mat-stepper>
    -->
-<div> <!-- Parent -->
-  <h1>Registration Form</h1>
 
-  <div>
-    <mat-stepper> <!--Page 1-->
-      <mat-step>
-        <ng-template matStepLabel>Content 1</ng-template>
-        <p>Content on 1</p>
-        <button mat-button matStepperNext>Next</button>
-      </mat-step>
+<body>
+  <div> <!-- Parent -->
+    <h1>Registration Form</h1>
 
-      <mat-step> <!--Page 2-->
-        <ng-template matStepLabel>Content 2</ng-template>
-        <p>Content on 2</p>
-        <button mat-button matStepperNext>Next</button>
-        <button mat-button matStepperPrevious>Previous</button>
-      </mat-step>
+    <div class="page1"><!--div 1-->
+      <mat-stepper> <!--Page 1-->
+        <mat-step>
+          <ng-template matStepLabel>Content 1</ng-template>
+          <h1>Application information</h1>
+          <p>Content on 1</p>
+          <div><!--div 2-->
+            <h2> Enter full name</h2>
+            <div class="group1">
+            <mat-form-field appearance="outline">
+              <mat-label>First name</mat-label>
+              <input matInput placeholder="Type here" required>
+              <!-- <mat-hint>Enter your first name here</mat-hint> -->
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Middle name</mat-label>
+              <input matInput placeholder="Type here">
+              <!-- <mat-hint>Enter your middle name here</mat-hint> -->
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Last name</mat-label>
+              <input matInput placeholder="Type here" required>
+              <!-- <mat-hint>Enter your last name here</mat-hint> -->
+            </mat-form-field>
+          </div>
+          </div> <!--div 2 close-->
+          <div><!-- div 3 -->
+            <h2>Father's name</h2>
+            <div class="group1">
+            <mat-form-field appearance="outline">
+              <mat-label>First name</mat-label>
+              <input matInput placeholder="Type here" required>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Middle name</mat-label>
+              <input matInput placeholder="Type here" required>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Last name</mat-label>
+              <input matInput placeholder="Type here" required>
+            </mat-form-field>
+          </div>
+          </div> <!--div 3 close-->
+          <button mat-button matStepperNext>Next</button>
+        </mat-step>
 
-      <mat-step> <!--Page 3-->
-        <ng-template matStepLabel>Content 3</ng-template>
-        <p>Content on 1</p>
-      </mat-step>
-    </mat-stepper>
+        <mat-step> <!--Page 2-->
+          <ng-template matStepLabel>Content 2</ng-template>
+          <p>Content on 2</p>
+          <button mat-button matStepperNext>Next</button>
+          <button mat-button matStepperPrevious>Previous</button>
+        </mat-step>
+
+        <mat-step> <!--Page 3-->
+          <ng-template matStepLabel>Content 3</ng-template>
+          <p>Content on 1</p>
+        </mat-step>
+      </mat-stepper>
+    </div>
   </div>
-</div>
+</body>
+
+</html>

@@ -5,6 +5,7 @@ import {MatFormFieldModule} from '@angular/material/form-field'; //Material
 import {MatStepperModule} from '@angular/material/stepper'; //Material
 import {MatButtonModule} from '@angular/material/button'; //Material
 
+
 @Component({
   selector: 'app-register-single',
   templateUrl: './register-single.component.html',
