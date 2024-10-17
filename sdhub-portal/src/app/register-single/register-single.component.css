@@ -6,9 +6,16 @@
     margin-top: 16px;
   }
 
-  .page1 {
-    background-color: #eb3a3a;
+  .box{
+    display: flex;
+    padding-left: 200px;
+    padding-right: 200px;
+    flex-direction: column;
   }
+
+  /* .page1 {
+    background-color: #eb3a3a;
+  } */
   
   h2 {
     margin: 0px;
@@ -24,10 +31,6 @@
     display: flex; */
   }
 
-  input .group1 {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
 /*
   .mat-form-field .mat-input-element {
   
