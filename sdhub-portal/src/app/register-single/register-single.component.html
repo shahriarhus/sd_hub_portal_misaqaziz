@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
     {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
   </button>
@@ -47,9 +48,9 @@
     <div class="page1"><!--div 1-->
       <mat-stepper> <!--Page 1-->
         <mat-step>
-          <ng-template matStepLabel>Content 1</ng-template>
-          <h1>Application information</h1>
-          <p>Content on 1</p>
+          <!-- <ng-template matStepLabel>Content 1</ng-template> -->
+          <h1>Personal</h1>
+          <p>Applicant Information</p>
           <div><!--div 2-->
             <h2> Enter full name</h2>
             <div class="group1">
@@ -87,6 +88,19 @@
             </mat-form-field>
           </div>
           </div> <!--div 3 close-->
+          <div>
+            <h2>Date of Birth</h2>
+            <div>
+            <mat-form-field appearance="outline">
+              <mat-label>Choose a date</mat-label>
+              <input matInput [matDatepicker]="picker">
+              <mat-hint>MM/DD/YYYY</mat-hint>
+              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            
+          </div>
+        </div>
           <button mat-button matStepperNext>Next</button>
         </mat-step>
 
@@ -100,6 +114,64 @@
         <mat-step> <!--Page 3-->
           <ng-template matStepLabel>Content 3</ng-template>
           <p>Content on 1</p>
+          <div class="form-section">
+            <h2>Declaration and Submission</h2>
+            <form action="register-education" method="post">
+              <div class="declare">
+                <input type="checkbox" id="checkbox" name="checkbox" />
+                <p>
+                  I declare that all the information given here is true and complete to
+                  the best of my knowledge.I understand that false or misleading
+                  information may result in my rejection of the application.
+                </p>
+              </div>
+        
+              <div class="main-input">
+                <div class="sub-input">
+                  <label for="Signiture">Student's Signiture</label><br />
+                  <input
+                    type="text"
+                    id="signiture"
+                    name="signiture"
+                    placeholder="Type full name to sign"
+                    required
+                  />
+                </div>
+                <div class="sub-input">
+                  <label for="Signiture">Parent/Guardian Signiture</label><br />
+                  <input
+                    type="text"
+                    id="parent-signiture"
+                    name="parent-signiture"
+                    placeholder="Type full name to sign"
+                    required
+                  />
+                </div>
+              </div>
+        
+              <label for="date">Date</label><br />
+              <input type="date" id="date" name="date" placeholder="date" required />
+        
+              <div class="enclosures">
+                <p>ENCLOSURES</p>
+                <ul>
+                  <li>Passport size photo</li>
+                  <li>Copy of Adhar Card</li>
+                  <li>Copy of photo ID proof</li>
+                  <li>Copy of collage ID card</li>
+                  <li>Original Certificate</li>
+                  <li>Income Certificate</li>
+                </ul>
+              </div>
+        
+              <div class="next-btn">
+                <a class="Previous" href="register-education">Previous</a>
+                <a type="submit" class="btn" href="#">Submit Registration</a>
+              </div>
+            </form>
+          </div>
+        
+        
         </mat-step>
       </mat-stepper>
     </div>

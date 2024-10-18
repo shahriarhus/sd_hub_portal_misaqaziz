@@ -12,6 +12,8 @@ import { MatButton, MatButtonModule } from '@angular/material/button'; //Materia
 import { MatCalendar } from '@angular/material/datepicker'; //Material
 import { MatCardModule } from '@angular/material/card'; //Material
 import { RegisterSingleComponent } from './register-single/register-single.component';
+import {provideNativeDateAdapter} from '@angular/material/core';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
@@ -28,10 +30,13 @@ import { RegisterSingleComponent } from './register-single/register-single.compo
     MatStepperModule, //Material
     MatInputModule, //Material
     MatButtonModule, //Material
-    MatCardModule //Material
+    MatCardModule, //Material
+    MatDatepickerModule, //Material
+    
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideNativeDateAdapter()
   ],
   bootstrap: [AppComponent]
 })
