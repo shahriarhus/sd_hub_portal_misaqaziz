@@ -85,7 +85,7 @@
               </mat-form-field>
               <mat-form-field appearance="outline">
                 <mat-label>Middle name</mat-label>
-                <input matInput placeholder="Type here" required>
+                <input matInput placeholder="Type here">
               </mat-form-field>
               <mat-form-field appearance="outline">
                 <mat-label>Last name</mat-label>
@@ -94,12 +94,13 @@
             </div>
           </div> <!--div 3 close-->
           <div>
-            <!-- <h2>Date of Birth</h2> -->
+            <h3>Personal details</h3>
+            <!-- Group Open -->
             <div class="group1">
               <div>
                 <mat-form-field appearance="outline">
                   <mat-label>Date of Birth</mat-label>
-                  <input matInput [matDatepicker]="picker">
+                  <input matInput [matDatepicker]="picker" required>
                   <mat-hint>MM/DD/YYYY</mat-hint>
                   <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                   <mat-datepicker #picker></mat-datepicker>
@@ -118,15 +119,40 @@
                 </mat-form-field>
               </div>
             </div>
+            <!-- Group Close -->
+            <div class="address_field">
+              <mat-form-field appearance="outline">
+                <mat-label>Address</mat-label>
+                <textarea matInput></textarea>
+                <mat-hint>Enter complete personal address</mat-hint>
+              </mat-form-field>
+            </div>
           </div>
+          <div>
+            <h3 id="heading_space">Parent/Guardian's contact details</h3>
+            <div class="group1">
+              <mat-form-field appearance="outline">
+              <mat-label>Contact number</mat-label>
+              <input matInput placeholder="Type here" required>
+            </mat-form-field>
+            <mat-form-field appearance="outline" id="field1">
+              <mat-label>Total Household Income</mat-label>
+              <input matInput placeholder="Enter amount" required>
+            </mat-form-field>
+            </div>
+          </div>
+          <div class="custom_button">
           <button mat-button matStepperNext>Next</button>
+        </div>
         </mat-step>
 
         <mat-step> <!--Page 2-->
           <ng-template matStepLabel>Content 2</ng-template>
           <p>Content on 2</p>
+          <div class="custom_button">
           <button mat-button matStepperNext>Next</button>
           <button mat-button matStepperPrevious>Previous</button>
+        </div>
         </mat-step>
 
         <mat-step> <!--Page 3-->
@@ -171,14 +197,16 @@
                 </ul>
               </div>
 
-              <div class="next-btn">
+              <!-- <div class="next-btn">
                 <a class="Previous" href="register-education">Previous</a>
                 <a type="submit" class="btn" href="#">Submit Registration</a>
-              </div>
+              </div> -->
             </form>
           </div>
 
-
+          <div class="custom_button">
+            <button mat-button matStepperPrevious>Previous</button>
+          </div>
         </mat-step>
       </mat-stepper>
     </div>
