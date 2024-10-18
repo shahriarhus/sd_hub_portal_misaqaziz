@@ -1,35 +1,90 @@
 .mat-stepper-horizontal {
     margin-top: 8px;
-  }
-  
-  .mat-mdc-form-field {
-    margin-top: 16px;
-  }
+}
 
-  .box{
+.mat-mdc-form-field {
+    margin-top: 16px;
+}
+
+/* .mat-step-text-label{
+    font-size: 10px !important;
+    font-weight: 10 !important;
+} */
+
+.box {
     display: flex;
     padding-left: 200px;
     padding-right: 200px;
     flex-direction: column;
-  }
+}
 
-  /* .page1 {
-    background-color: #eb3a3a;
-  } */
-  
-  h2 {
+.header {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
+
+.sub_heading {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.sub_heading h3,
+h1 {
+    /* margin: 0px !important;
+    padding: 0px !important; */
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.sub_heading h3 {
+    font-weight: 400;
+}
+
+/* .header .sub_heading h1{
     margin: 0px;
     padding: 0px;
-  }
-  
-  .group1{
+  } */
+
+.header img {
+    background-color: #fff;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+/* .page1 {
+    background-color: #eb3a3a;
+  } */
+
+h3 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.group1 {
     padding-left: 0px;
     padding-right: 0px;
     gap: 50px;
     display: flex;
     /* justify-content: space-between;
     display: flex; */
-  }
+}
+
+.page1 h1{
+    padding-bottom: 10px;
+}
+
+.page1 h3{
+    font-weight: 450;
+}
 
 /*
   .mat-form-field .mat-input-element {
@@ -40,17 +95,18 @@
   }
   */
 
-  /* Decleration CSS */
+/* Decleration CSS */
 
-  .main-register{
+.main-register {
     font-family: 'Times New Roman', Times, serif;
     /* height: 100vh; */
     max-width: 60%;
-    border: 1px solid #DC143C ;
+    border: 1px solid #DC143C;
     margin: auto;
     box-shadow: 0 0 15px rgb(134, 132, 132);
     margin-top: 50px;
 }
+
 /* .main-register::-webkit-scrollbar{
     width: 5px;
 }
@@ -58,56 +114,64 @@
     border-radius: 20px;
     background: silver;
 } */
-.head{
+.head {
     display: flex;
     justify-content: space-between;
 }
-.register-head{
+
+.register-head {
     display: flex;
     justify-content: space-between;
     background-color: #DC143C;
     align-items: center;
 }
-.register-head-div1{
+
+.register-head-div1 {
     height: 100px;
     display: flex;
     align-items: center;
 }
-.register-head-div2{
+
+.register-head-div2 {
     height: 80px;
     width: 60px;
     border: 1px dotted #fff;
     margin-right: 20px;
     align-content: center;
 }
-.register-head-div2 p{
+
+.register-head-div2 p {
     font-size: 8px;
     color: #fff;
     text-align: center;
 }
-.img{
+
+/* .img{
     background-color: #fff;
     height: 70px;
     width: 70px;
     border-radius: 50%;
     margin-left: 20px;
-}
-.register-head img{
+} */
+.register-head img {
     max-width: 70px;
     max-height: 70px;
     margin-top: 0px;
 }
-.register-head h1{
+
+.register-head h1 {
     font-family: 'Times New Roman', Times, serif;
     color: #fff;
     margin-top: 15px;
     font-size: 22px;
     margin-bottom: 0;
 }
-.logo-name{
+
+.logo-name {
     margin-left: 10px;
 }
-.logo-name p{
+
+.logo-name p {
     margin-top: 0px;
     margin-bottom: 15px;
     color: #fff;
@@ -116,16 +180,18 @@
 
 /* -------------Module Section---------------------- */
 
-.module-sec{
+.module-sec {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
-.module{
+
+.module {
     width: 100px;
     margin: 5px 20px;
     text-align: center;
 }
-.module-num{
+
+.module-num {
     padding: 0px 8px;
     width: fit-content;
     font-size: 11px;
@@ -133,14 +199,17 @@
     background-color: lightgrey;
     margin: auto;
 }
-.num1{
+
+.num1 {
     background-color: #DC143C;
     color: #fff !important;
 }
-.num1-p{
+
+.num1-p {
     color: #DC143C !important;
 }
-.module p{
+
+.module p {
     margin-top: 5px;
     font-size: 11px;
     color: gray;
@@ -149,40 +218,46 @@
 
 /* ----------------------Register Body Section----------------- */
 
-.form-section{
+.form-section {
     padding: 20px;
     color: #DC143C;
     background-color: #fff;
 }
-.form-section h2{
+
+.form-section h3 {
     font-family: 'Times New Roman', Times, serif;
     border-bottom: 1px solid #fb90a5;
     padding-bottom: 0;
     margin-top: -25px;
     font-size: 30px;
 }
-.declare{
+
+.declare {
     display: flex;
 }
-.declare p{
+
+.declare p {
     color: rgb(97, 96, 96);
     font-size: 10px;
     line-height: 1.2;
     padding-top: 7px;
 }
-.form-section label{
+
+.form-section label {
     font-size: 15px;
 }
 
-.main-input{
+.main-input {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
 }
-.sub-input{
+
+.sub-input {
     width: 100%;
 }
-input[type = "text"]{
+
+input[type="text"] {
     width: 95%;
     padding: 6px;
     margin-bottom: 20px;
@@ -193,7 +268,8 @@ input[type = "text"]{
     text-align: start;
     font-size: 15px;
 }
-input[type="date"]{
+
+input[type="date"] {
     width: 97%;
     padding: 6px;
     margin-bottom: 20px;
@@ -204,23 +280,27 @@ input[type="date"]{
     text-align: start;
     font-size: 15px;
 }
-.enclosures p{
+
+.enclosures p {
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 0;
 }
-.enclosures ul{
+
+.enclosures ul {
     margin-top: 0;
     padding-left: 20px;
     color: rgb(97, 96, 96);
     font-size: 12px;
     line-height: 1.5;
 }
-.next-btn{
+
+.next-btn {
     display: flex;
     justify-content: space-between;
 }
-.Previous{
+
+.Previous {
     font-family: 'Times New Roman', Times, serif;
     text-decoration: none;
     padding: 5px 15px;
@@ -228,13 +308,15 @@ input[type="date"]{
     background-color: transparent;
     color: #DC143C;
     border: 1px solid #DC143C;
-}    
-.Previous:hover{
+}
+
+.Previous:hover {
     background-color: #DC143C;
     color: #fff;
     transition: 0.7s;
 }
-.btn{
+
+.btn {
     font-family: 'Times New Roman', Times, serif;
     text-decoration: none;
     padding: 5px 15px;
@@ -244,6 +326,7 @@ input[type="date"]{
     border: none;
     cursor: pointer;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: #bc0a2e;
 }
