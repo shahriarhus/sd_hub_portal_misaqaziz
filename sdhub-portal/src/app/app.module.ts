@@ -14,6 +14,7 @@ import { MatCardModule } from '@angular/material/card'; //Material
 import { RegisterSingleComponent } from './register-single/register-single.component';
 import {provideNativeDateAdapter} from '@angular/material/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatButtonModule, //Material
     MatCardModule, //Material
     MatDatepickerModule, //Material
+    MatSelectModule, //Matertial
     
   ],
   providers: [

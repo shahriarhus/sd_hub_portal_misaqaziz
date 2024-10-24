@@ -7,6 +7,8 @@ import {MatButtonModule} from '@angular/material/button'; //Material
 import {MatDatepickerModule} from '@angular/material/datepicker'; //Material
 //import {ChangeDetectionStrategy} from '@angular/core';
 import {provideNativeDateAdapter} from '@angular/material/core';
+import {MatSelectModule} from '@angular/material/select';
+
 
 
 @Component({
@@ -16,6 +18,7 @@ import {provideNativeDateAdapter} from '@angular/material/core';
   standalone: false
 })
 export class RegisterSingleComponent {
+  selected = 'option1';
   // private _formBuilder = inject(FormBuilder);
 
   // firstFormGroup = this._formBuilder.group({

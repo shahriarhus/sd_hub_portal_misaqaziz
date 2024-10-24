@@ -130,6 +130,20 @@ h3 {
     display: flex;
 }
 
+#custom_dropdown{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#custom_dropdown mat-form-field{
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    
+}
+
 /* ------Other CSS rules ------ */
 
 /* Decleration CSS */

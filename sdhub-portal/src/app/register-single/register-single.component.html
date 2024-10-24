@@ -147,8 +147,50 @@
         </mat-step>
 
         <mat-step> <!--Page 2-->
-          <ng-template matStepLabel>Content 2</ng-template>
-          <p>Content on 2</p>
+          <ng-template matStepLabel>Education</ng-template>
+          <div >
+          <h1>Course Details</h1>
+          <div id="custom_dropdown">
+          <h3>Course Apply For</h3>
+          <mat-form-field appearance="outline">
+            <mat-label>Select an option</mat-label>
+            <mat-select [(value)]="selected">
+              <mat-option>None</mat-option>
+              <mat-option value="Web Development">Web Development</mat-option>
+              <mat-option value="Data Analyst">Data Analyst</mat-option>
+              <mat-option value="Tally">Tally</mat-option>
+              <mat-option value="Digital Marketing">Digital Marketing</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div>
+      <h3>Degree Details</h3>
+        <div class="group1">
+          <mat-form-field appearance="outline">
+            <mat-label>Degree</mat-label>
+            <input matInput placeholder="Enter your degree" required>
+          </mat-form-field>
+        
+
+          <mat-form-field appearance="outline">
+            <mat-label>College name</mat-label>
+            <input matInput placeholder="Enter your college name" required>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Year of passing</mat-label>
+            <input matInput placeholder="Enter year of passing" required>
+          </mat-form-field>
+        </div>
+      </div>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Percentage</mat-label>
+            <input matInput placeholder="Enter your percentage" required>
+          </mat-form-field>
+
           <div class="custom_button">
           <button mat-button matStepperNext>Next</button>
           <button mat-button matStepperPrevious>Previous</button>
