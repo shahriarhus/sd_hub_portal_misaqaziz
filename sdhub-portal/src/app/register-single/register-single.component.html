@@ -198,9 +198,9 @@
         </mat-step>
 
         <mat-step> <!--Page 3-->
-          <ng-template matStepLabel>Content 3</ng-template>
-          <p>Content on 1</p>
-          <div class="form-section">
+          <ng-template matStepLabel>Declaration</ng-template>
+          <!-- <p>Content on 1</p> -->
+          <!-- <div class="form-section">
             <h2>Declaration and Submission</h2>
             <form action="register-education" method="post">
               <div class="declare">
@@ -239,15 +239,60 @@
                 </ul>
               </div>
 
-              <!-- <div class="next-btn">
+              <div class="next-btn">
                 <a class="Previous" href="register-education">Previous</a>
                 <a type="submit" class="btn" href="#">Submit Registration</a>
-              </div> -->
+              </div>
             </form>
+          </div> -->
+          <div>
+          <h1>Declaration & Submission</h1>
+          
+          <div>
+            
           </div>
+          
+          <div class="custom_rule">
+            <h3>ENCLOSURES</h3>
+              <!-- <ul>
+                <li>Passport size photo <input type="file"></li>
+                <li>Adhaar card <input type="file"></li>
+                <li>College ID <input type="file"></li>
+                <li>Provisional Certificate <input type="file"></li>
+                <li>Income Certificate <input type="file"> </li>
+              </ul> -->
+              <table>
+                <tr>
+                  <td>Passport size photo</td>
+                  <td><input type="file"></td>
+                </tr>
+                <tr>
+                  <td>Adhaar card</td>
+                  <td><input type="file"></td>
+                </tr>
+                <tr>
+                  <td>College ID</td>
+                  <td><input type="file"></td>
+                </tr>
+                <tr>
+                  <td>Provisional Certificate</td>
+                  <td><input type="file"></td>
+                </tr>
+              </table>
+          </div>
+
+          <div>
+              <mat-checkbox><p>I declare that all the information given here is true and complete to
+                the best of my knowledge. I understand that false or misleading
+                information may result in my rejection of the application.</p></mat-checkbox>
+          </div>
+
+        </div>
+
 
           <div class="custom_button">
             <button mat-button matStepperPrevious>Previous</button>
+            <button type="submit">Submit</button>
           </div>
         </mat-step>
       </mat-stepper>

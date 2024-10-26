@@ -91,7 +91,7 @@ h3 {
 }
 
 .page1 h1 {
-    padding-bottom: 10px;
+    padding-bottom: 25px;
 }
 
 .page1 h3 {
@@ -143,6 +143,20 @@ h3 {
     margin-bottom: 0px !important;
     
 }
+
+.custom_rule table{
+    width: 200%;
+}
+
+.custom_rule{
+    padding-bottom: 10px;
+}
+
+/* .box .mat-horizontal-content-container,.mat-stepper-horizontal,.mat-horizontal-stepper-wrapper {
+    overflow: hidden;
+    padding: 0% !important;
+    display: flex !important;
+  } */
 
 /* ------Other CSS rules ------ */
 

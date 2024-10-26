@@ -8,6 +8,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker'; //Material
 //import {ChangeDetectionStrategy} from '@angular/core';
 import {provideNativeDateAdapter} from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 
