@@ -1,303 +1,265 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
-    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
-  </button>
-  <mat-stepper [linear]="isLinear" #stepper>
-    <mat-step [stepControl]="firstFormGroup">
-      <form [formGroup]="firstFormGroup">
-        <ng-template matStepLabel>Fill out your name</ng-template>
-        <mat-form-field>
-          <mat-label>Name</mat-label>
-          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
-      <form [formGroup]="secondFormGroup">
-        <mat-form-field>
-          <mat-label>Address</mat-label>
-          <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
-                 required>
-        </mat-form-field>
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
+<div class="box"> <!-- Parent -->
+<div class="header">
+  <img src="./logo.png" alt="logo image">
+  <div class="sub_heading">
+    <h1>Student Registration</h1>
+    <h3>Skill Development Hub</h3>
+  </div>
+</div>
+<div class="page1"><!--div 1-->
+  <mat-stepper> <!--Page 1-->
+    <!-- <mat-step>
+      <ng-template matStepLabel>Step 1</ng-template>
+      <app-first-step [myName]="userdetail.firstName"></app-first-step>
     </mat-step>
     <mat-step>
-      <ng-template matStepLabel>Done</ng-template>
-      <p>You are now done.</p>
+      <ng-template matStepLabel>Step 2</ng-template>
+      <app-secound-step></app-secound-step>
+    </mat-step> -->
+    <mat-step>
+      <ng-template matStepLabel>Personal</ng-template>
+      <h1>Applicant Information</h1>
+
+      <div><!--div 2-->
+        <h3> Enter full name</h3>
+        <div class="group1">
+          <mat-form-field appearance="outline">
+            <mat-label>First name</mat-label>
+            <input [(ngModel)]="userdetail.firstName" matInput placeholder="Type here" required>
+            <!-- <mat-hint>Enter your first name here</mat-hint> -->
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Middle name</mat-label>
+            <input matInput placeholder="Type here">
+            <!-- <mat-hint>Enter your middle name here</mat-hint> -->
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Last name</mat-label>
+            <input matInput placeholder="Type here" required>
+            <!-- <mat-hint>Enter your last name here</mat-hint> -->
+          </mat-form-field>
+        </div>
+      </div> <!--div 2 close-->
+      <div><!-- div 3 -->
+        <h3>Father's name</h3>
+        <div class="group1">
+          <mat-form-field appearance="outline">
+            <mat-label>First name</mat-label>
+            <input [(ngModel)]="userdetail.fathersName" matInput placeholder="Type here" required>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Middle name</mat-label>
+            <input matInput placeholder="Type here">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Last name</mat-label>
+            <input matInput placeholder="Type here" required>
+          </mat-form-field>
+        </div>
+      </div> <!--div 3 close-->
+      {{userdetail.fathersName}}
       <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button (click)="stepper.reset()">Reset</button>
+        <h3>Personal details</h3>
+        <!-- Group Open -->
+        <div class="group1">
+          <div>
+            <mat-form-field appearance="outline">
+              <mat-label>Date of Birth</mat-label>
+              <input matInput [matDatepicker]="picker" required>
+              <mat-hint>MM/DD/YYYY</mat-hint>
+              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field appearance="outline">
+              <mat-label>Phone number</mat-label>
+              <input matInput placeholder="91-XXX-XXX-XXXX" required>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="example@gmail.com" required>
+            </mat-form-field>
+          </div>
+        </div>
+        <!-- Group Close -->
+        <div class="address_field">
+          <mat-form-field appearance="outline">
+            <mat-label>Address</mat-label>
+            <textarea matInput></textarea>
+            <mat-hint>Enter complete personal address</mat-hint>
+          </mat-form-field>
+        </div>
+      </div>
+      <div>
+        <h3 id="heading_space">Parent/Guardian's contact details</h3>
+        <div class="group1">
+          <mat-form-field appearance="outline">
+          <mat-label>Contact number</mat-label>
+          <input matInput placeholder="Type here" required>
+        </mat-form-field>
+        <mat-form-field appearance="outline" id="field1">
+          <mat-label>Total Household Income</mat-label>
+          <input matInput placeholder="Enter amount" required>
+        </mat-form-field>
+        </div>
+      </div>
+      <div class="custom_button">
+      <button mat-button matStepperNext>Next</button>
+    </div>
+    </mat-step>
+
+    <mat-step> <!--Page 2-->
+      <ng-template matStepLabel>Education</ng-template>
+      <div >
+      <h1>Course Details</h1>
+      <div id="custom_dropdown">
+      <h3>Course Apply For</h3>
+      <mat-form-field appearance="outline">
+        <mat-label>Select an option</mat-label>
+        <mat-select [(value)]="selected">
+          <mat-option>None</mat-option>
+          <mat-option value="Web Development">Web Development</mat-option>
+          <mat-option value="Data Analyst">Data Analyst</mat-option>
+          <mat-option value="Tally">Tally</mat-option>
+          <mat-option value="Digital Marketing">Digital Marketing</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div>
+  <h3>Degree Details</h3>
+    <div class="group1">
+      <mat-form-field appearance="outline">
+        <mat-label>Degree</mat-label>
+        <input matInput placeholder="Enter your degree" required>
+      </mat-form-field>
+    
+
+      <mat-form-field appearance="outline">
+        <mat-label>College name</mat-label>
+        <input matInput placeholder="Enter your college name" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Year of passing</mat-label>
+        <input matInput placeholder="Enter year of passing" required>
+      </mat-form-field>
+    </div>
+  </div>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Percentage</mat-label>
+        <input matInput placeholder="Enter your percentage" required>
+      </mat-form-field>
+
+      <div class="custom_button">
+      <button mat-button matStepperNext>Next</button>
+      <button mat-button matStepperPrevious>Previous</button>
+    </div>
+    </mat-step>
+
+    <mat-step> <!--Page 3-->
+      <ng-template matStepLabel>Declaration</ng-template>
+      <!-- <p>Content on 1</p> -->
+      <!-- <div class="form-section">
+        <h2>Declaration and Submission</h2>
+        <form action="register-education" method="post">
+          <div class="declare">
+            <input type="checkbox" id="checkbox" name="checkbox" />
+            <p>
+              I declare that all the information given here is true and complete to
+              the best of my knowledge.I understand that false or misleading
+              information may result in my rejection of the application.
+            </p>
+          </div>
+
+          <div class="main-input">
+            <div class="sub-input">
+              <label for="Signiture">Student's Signiture</label><br />
+              <input type="text" id="signiture" name="signiture" placeholder="Type full name to sign" required />
+            </div>
+            <div class="sub-input">
+              <label for="Signiture">Parent/Guardian Signiture</label><br />
+              <input type="text" id="parent-signiture" name="parent-signiture" placeholder="Type full name to sign"
+                required />
+            </div>
+          </div>
+
+          <label for="date">Date</label><br />
+          <input type="date" id="date" name="date" placeholder="date" required />
+
+          <div class="enclosures">
+            <p>ENCLOSURES</p>
+            <ul>
+              <li>Passport size photo</li>
+              <li>Copy of Adhar Card</li>
+              <li>Copy of photo ID proof</li>
+              <li>Copy of collage ID card</li>
+              <li>Original Certificate</li>
+              <li>Income Certificate</li>
+            </ul>
+          </div>
+
+          <div class="next-btn">
+            <a class="Previous" href="register-education">Previous</a>
+            <a type="submit" class="btn" href="#">Submit Registration</a>
+          </div>
+        </form>
+      </div> -->
+      <div>
+      <h1>Declaration & Submission</h1>
+      
+      <div>
+        
+      </div>
+      
+      <div class="custom_rule">
+        <h3>ENCLOSURES</h3>
+          <!-- <ul>
+            <li>Passport size photo <input type="file"></li>
+            <li>Adhaar card <input type="file"></li>
+            <li>College ID <input type="file"></li>
+            <li>Provisional Certificate <input type="file"></li>
+            <li>Income Certificate <input type="file"> </li>
+          </ul> -->
+          <table>
+            <tr>
+              <td>Passport size photo</td>
+              <td><input type="file"></td>
+            </tr>
+            <tr>
+              <td>Adhaar card</td>
+              <td><input type="file"></td>
+            </tr>
+            <tr>
+              <td>College ID</td>
+              <td><input type="file"></td>
+            </tr>
+            <tr>
+              <td>Provisional Certificate</td>
+              <td><input type="file"></td>
+            </tr>
+          </table>
+      </div>
+
+      <div>
+          <mat-checkbox><p>I declare that all the information given here is true and complete to
+            the best of my knowledge. I understand that false or misleading
+            information may result in my rejection of the application.</p></mat-checkbox>
+      </div>
+
+    </div>
+
+
+      <div class="custom_button">
+        <button mat-button matStepperPrevious>Previous</button>
+        <button type="submit">Submit</button>
       </div>
     </mat-step>
   </mat-stepper>
-   -->
-
-<body>
-  <div class="box"> <!-- Parent -->
-    <div class="header">
-      <img src="./logo.png" alt="logo image">
-      <div class="sub_heading">
-        <h1>Student Registration</h1>
-        <h3>Skill Development Hub</h3>
-      </div>
-    </div>
-    <div class="page1"><!--div 1-->
-      <mat-stepper> <!--Page 1-->
-        <mat-step>
-          <ng-template matStepLabel>Personal</ng-template>
-          <h1>Applicant Information</h1>
-
-          <div><!--div 2-->
-            <h3> Enter full name</h3>
-            <div class="group1">
-              <mat-form-field appearance="outline">
-                <mat-label>First name</mat-label>
-                <input matInput placeholder="Type here" required>
-                <!-- <mat-hint>Enter your first name here</mat-hint> -->
-              </mat-form-field>
-              <mat-form-field appearance="outline">
-                <mat-label>Middle name</mat-label>
-                <input matInput placeholder="Type here">
-                <!-- <mat-hint>Enter your middle name here</mat-hint> -->
-              </mat-form-field>
-              <mat-form-field appearance="outline">
-                <mat-label>Last name</mat-label>
-                <input matInput placeholder="Type here" required>
-                <!-- <mat-hint>Enter your last name here</mat-hint> -->
-              </mat-form-field>
-            </div>
-          </div> <!--div 2 close-->
-          <div><!-- div 3 -->
-            <h3>Father's name</h3>
-            <div class="group1">
-              <mat-form-field appearance="outline">
-                <mat-label>First name</mat-label>
-                <input matInput placeholder="Type here" required>
-              </mat-form-field>
-              <mat-form-field appearance="outline">
-                <mat-label>Middle name</mat-label>
-                <input matInput placeholder="Type here">
-              </mat-form-field>
-              <mat-form-field appearance="outline">
-                <mat-label>Last name</mat-label>
-                <input matInput placeholder="Type here" required>
-              </mat-form-field>
-            </div>
-          </div> <!--div 3 close-->
-          <div>
-            <h3>Personal details</h3>
-            <!-- Group Open -->
-            <div class="group1">
-              <div>
-                <mat-form-field appearance="outline">
-                  <mat-label>Date of Birth</mat-label>
-                  <input matInput [matDatepicker]="picker" required>
-                  <mat-hint>MM/DD/YYYY</mat-hint>
-                  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-                  <mat-datepicker #picker></mat-datepicker>
-                </mat-form-field>
-              </div>
-              <div>
-                <mat-form-field appearance="outline">
-                  <mat-label>Phone number</mat-label>
-                  <input matInput placeholder="91-XXX-XXX-XXXX" required>
-                </mat-form-field>
-              </div>
-              <div>
-                <mat-form-field appearance="outline">
-                  <mat-label>Email</mat-label>
-                  <input matInput placeholder="example@gmail.com" required>
-                </mat-form-field>
-              </div>
-            </div>
-            <!-- Group Close -->
-            <div class="address_field">
-              <mat-form-field appearance="outline">
-                <mat-label>Address</mat-label>
-                <textarea matInput></textarea>
-                <mat-hint>Enter complete personal address</mat-hint>
-              </mat-form-field>
-            </div>
-          </div>
-          <div>
-            <h3 id="heading_space">Parent/Guardian's contact details</h3>
-            <div class="group1">
-              <mat-form-field appearance="outline">
-              <mat-label>Contact number</mat-label>
-              <input matInput placeholder="Type here" required>
-            </mat-form-field>
-            <mat-form-field appearance="outline" id="field1">
-              <mat-label>Total Household Income</mat-label>
-              <input matInput placeholder="Enter amount" required>
-            </mat-form-field>
-            </div>
-          </div>
-          <div class="custom_button">
-          <button mat-button matStepperNext>Next</button>
-        </div>
-        </mat-step>
-
-        <mat-step> <!--Page 2-->
-          <ng-template matStepLabel>Education</ng-template>
-          <div >
-          <h1>Course Details</h1>
-          <div id="custom_dropdown">
-          <h3>Course Apply For</h3>
-          <mat-form-field appearance="outline">
-            <mat-label>Select an option</mat-label>
-            <mat-select [(value)]="selected">
-              <mat-option>None</mat-option>
-              <mat-option value="Web Development">Web Development</mat-option>
-              <mat-option value="Data Analyst">Data Analyst</mat-option>
-              <mat-option value="Tally">Tally</mat-option>
-              <mat-option value="Digital Marketing">Digital Marketing</mat-option>
-            </mat-select>
-          </mat-form-field>
-        </div>
-      </div>
-
-      <div>
-      <h3>Degree Details</h3>
-        <div class="group1">
-          <mat-form-field appearance="outline">
-            <mat-label>Degree</mat-label>
-            <input matInput placeholder="Enter your degree" required>
-          </mat-form-field>
-        
-
-          <mat-form-field appearance="outline">
-            <mat-label>College name</mat-label>
-            <input matInput placeholder="Enter your college name" required>
-          </mat-form-field>
-
-          <mat-form-field appearance="outline">
-            <mat-label>Year of passing</mat-label>
-            <input matInput placeholder="Enter year of passing" required>
-          </mat-form-field>
-        </div>
-      </div>
-
-          <mat-form-field appearance="outline">
-            <mat-label>Percentage</mat-label>
-            <input matInput placeholder="Enter your percentage" required>
-          </mat-form-field>
-
-          <div class="custom_button">
-          <button mat-button matStepperNext>Next</button>
-          <button mat-button matStepperPrevious>Previous</button>
-        </div>
-        </mat-step>
-
-        <mat-step> <!--Page 3-->
-          <ng-template matStepLabel>Declaration</ng-template>
-          <!-- <p>Content on 1</p> -->
-          <!-- <div class="form-section">
-            <h2>Declaration and Submission</h2>
-            <form action="register-education" method="post">
-              <div class="declare">
-                <input type="checkbox" id="checkbox" name="checkbox" />
-                <p>
-                  I declare that all the information given here is true and complete to
-                  the best of my knowledge.I understand that false or misleading
-                  information may result in my rejection of the application.
-                </p>
-              </div>
-
-              <div class="main-input">
-                <div class="sub-input">
-                  <label for="Signiture">Student's Signiture</label><br />
-                  <input type="text" id="signiture" name="signiture" placeholder="Type full name to sign" required />
-                </div>
-                <div class="sub-input">
-                  <label for="Signiture">Parent/Guardian Signiture</label><br />
-                  <input type="text" id="parent-signiture" name="parent-signiture" placeholder="Type full name to sign"
-                    required />
-                </div>
-              </div>
-
-              <label for="date">Date</label><br />
-              <input type="date" id="date" name="date" placeholder="date" required />
-
-              <div class="enclosures">
-                <p>ENCLOSURES</p>
-                <ul>
-                  <li>Passport size photo</li>
-                  <li>Copy of Adhar Card</li>
-                  <li>Copy of photo ID proof</li>
-                  <li>Copy of collage ID card</li>
-                  <li>Original Certificate</li>
-                  <li>Income Certificate</li>
-                </ul>
-              </div>
-
-              <div class="next-btn">
-                <a class="Previous" href="register-education">Previous</a>
-                <a type="submit" class="btn" href="#">Submit Registration</a>
-              </div>
-            </form>
-          </div> -->
-          <div>
-          <h1>Declaration & Submission</h1>
-          
-          <div>
-            
-          </div>
-          
-          <div class="custom_rule">
-            <h3>ENCLOSURES</h3>
-              <!-- <ul>
-                <li>Passport size photo <input type="file"></li>
-                <li>Adhaar card <input type="file"></li>
-                <li>College ID <input type="file"></li>
-                <li>Provisional Certificate <input type="file"></li>
-                <li>Income Certificate <input type="file"> </li>
-              </ul> -->
-              <table>
-                <tr>
-                  <td>Passport size photo</td>
-                  <td><input type="file"></td>
-                </tr>
-                <tr>
-                  <td>Adhaar card</td>
-                  <td><input type="file"></td>
-                </tr>
-                <tr>
-                  <td>College ID</td>
-                  <td><input type="file"></td>
-                </tr>
-                <tr>
-                  <td>Provisional Certificate</td>
-                  <td><input type="file"></td>
-                </tr>
-              </table>
-          </div>
-
-          <div>
-              <mat-checkbox><p>I declare that all the information given here is true and complete to
-                the best of my knowledge. I understand that false or misleading
-                information may result in my rejection of the application.</p></mat-checkbox>
-          </div>
-
-        </div>
-
-
-          <div class="custom_button">
-            <button mat-button matStepperPrevious>Previous</button>
-            <button type="submit">Submit</button>
-          </div>
-        </mat-step>
-      </mat-stepper>
-    </div>
-  </div>
-</body>
-
-</html>
+</div>
+</div>

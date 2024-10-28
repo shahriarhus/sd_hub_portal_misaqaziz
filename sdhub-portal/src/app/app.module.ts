@@ -16,13 +16,17 @@ import {provideNativeDateAdapter} from '@angular/material/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { FirstStepComponent } from './first-step/first-step.component';
+import { SecoundStepComponent } from './secound-step/secound-step.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SigninComponent,
     RegisterComponent,
-    RegisterSingleComponent
+    RegisterSingleComponent,
+    FirstStepComponent,
+    SecoundStepComponent
   ],
   imports: [
     BrowserModule,

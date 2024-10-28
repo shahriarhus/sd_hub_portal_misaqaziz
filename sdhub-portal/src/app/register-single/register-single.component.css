@@ -1,6 +1,7 @@
-.mat-stepper-horizontal {
-    margin-top: 8px;
-}
+/* ::ng-deep .mat-horizontal-content-container{
+    padding: 0px !important;
+    
+} */
 
 .mat-mdc-form-field {
     margin-top: 16px;

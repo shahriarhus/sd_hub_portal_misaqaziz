@@ -20,6 +20,11 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 })
 export class RegisterSingleComponent {
   selected = 'option1';
+  userdetail ={
+    firstName:'',
+    middleName:'',
+    fathersName: ''
+  }
   // private _formBuilder = inject(FormBuilder);
 
   // firstFormGroup = this._formBuilder.group({
