@@ -14,10 +14,10 @@ async function dbconnect() {
 //  var list = await client.db().admin().listDatabases();
 //  console.log(list);
 
-    const db = client.db('sd_hub');
-    const collection = db.collection('students');
-    var docs = await collection.find({}).toArray();
-    console.log(docs);
+    const db = client.db('sdhub');
+    const collection = db.collection('student');
+    // var docs = await collection.find({}).toArray();
+    // console.log(docs);
     collection.insertMany([
         {studentID:31,name:'Yousuf', age:22, number:2122154789, email: 'yousuf@sdhub.com'},
         {studentID:23, name:'Talha', age:20, number:1234567890, email:"talha@sdhub.com"},
